@@ -387,6 +387,21 @@ section {
   flex-shrink: 0;
 }
 
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-12px);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.5), 0 0 25px rgba(0, 180, 255, 0.25);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
 .hero-terminal {
   position: relative;
   width: 100%;
@@ -399,6 +414,12 @@ section {
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   font-family: var(--mono);
+  animation: float 6s ease-in-out infinite;
+  transition: border-color 0.3s ease;
+}
+
+.hero-terminal:hover {
+  border-color: rgba(0, 180, 255, 0.5);
 }
 
 .terminal-header {
