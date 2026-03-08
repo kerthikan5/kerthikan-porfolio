@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+@theme {
+  --color-base-900: #0a0e17;
+  --color-base-800: #101623;
+  --color-base-700: #1a2235;
+  --color-accent: #3b82f6;
+  --color-accent-light: #60a5fa;
+  --color-violet-accent: #8b5cf6;
+}
+
+:root {
+  --background: #0a0e17;
+  --foreground: #f3f4f6;
+  --bg-gradient: radial-gradient(circle at top center, rgba(30, 58, 138, 0.15) 0%, rgba(10, 14, 23, 1) 60%);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--background);
+  background-image: var(--bg-gradient);
+  background-attachment: fixed;
+  color: var(--foreground);
+  font-family: var(--font-inter), sans-serif;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* Glassmorphism utilities */
+.glass {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.glass-card {
+  background: linear-gradient(145deg, rgba(20, 26, 40, 0.6) 0%, rgba(10, 14, 23, 0.8) 100%);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Glow effects */
+.glow-text {
+  text-shadow: 0 0 20px rgba(96, 165, 250, 0.4);
+}
+
+.glow-box:hover {
+  box-shadow: 0 0 30px rgba(59, 130, 246, 0.15);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0e17;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+/* Base resets */
+* {
+  box-sizing: border-box;
+}
